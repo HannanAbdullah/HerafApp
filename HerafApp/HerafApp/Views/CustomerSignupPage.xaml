@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Style="{StaticResource ContentPageStyle}"
+             NavigationPage.HasNavigationBar="True"
+             x:Class="HerafApp.Views.CustomerSignupPage">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="Language.png"
+                     Clicked="ChangeLanguage_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ScrollView >
+            <StackLayout Margin="40,0,40,30"
+               VerticalOptions="Center" >
+
+                <Label  x:Name="pageTitle"
+                   Style="{StaticResource PageTitle }"/>
+
+                <Label  x:Name="customerInfo"
+                   Style="{StaticResource labelStyle }"/>
+
+                <Entry x:Name="userName"
+                   Style="{StaticResource infoEntryStyle}"
+                   Keyboard="Text" />
+
+                <Entry x:Name="email"
+                   Style="{StaticResource infoEntryStyle}"
+                   Keyboard="Email" />
+
+                <Grid FlowDirection="LeftToRight">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Column="0"
+                       Text="+966"
+                       Style="{StaticResource countryKeyStyle}"/>
+
+                    <Entry  Grid.Column="1"
+                    x:Name="phoneEntry"
+                   Keyboard="Telephone"
+                   HorizontalTextAlignment="Center"
+                   Style="{StaticResource infoEntryStyle}"/>
+                </Grid>
+
+                <Entry x:Name="password"
+                   IsPassword="True"
+                   Style="{StaticResource infoEntryStyle}"/>
+
+                <Entry x:Name="confirmPassword"
+                   IsPassword="True"
+                   Style="{StaticResource infoEntryStyle}"/>
+
+                <Picker  x:Name="cityPicker"
+                     Style="{StaticResource pickerStyle}" />
+
+                <Label  x:Name="visaCard"
+                   Style="{StaticResource labelStyle }"/>
+
+                <Entry x:Name="visaUserName"
+                   Keyboard="Text"
+                   Style="{StaticResource infoEntryStyle}"/>
+
+                <Entry x:Name="visaCardNumber"
+                   Keyboard="Numeric"
+                   Style="{StaticResource infoEntryStyle}"/>
+
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Entry Grid.Column="0"
+                       Placeholder="CVV"
+                       Keyboard="Numeric"
+                       Style="{StaticResource infoEntryStyle}"/>
+
+                    <DatePicker  Grid.Column="1"
+                             x:Name="expiryDate"
+                             Style="{StaticResource pickerStyle}"
+                             Format="MM/yy" />
+                </Grid>
+
+                <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <CheckBox Grid.Column="0"
+                              x:Name="agreeCheckbox"
+                              Style="{StaticResource checkboxStyle}" />
+
+                        <Label   Grid.Column="1"
+                             x:Name="agreement"
+                             Style="{StaticResource agreementLabel}">
+
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="ShowAgreementPopup_Clicked"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </Grid>
+
+                    <Button x:Name="signupButton"
+                        Style="{StaticResource buttonStyle}"
+                        Clicked="SignupButton_Clicked"
+                        Margin="0,0,0,30"/>
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>

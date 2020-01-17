@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Page:PopupPage xmlns:Page="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" xmlns="http://xamarin.com/schemas/2014/forms" 
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+                xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                mc:Ignorable="d"
+                x:Class="HerafApp.Views.AgreementPopUp"
+                xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup">
+
+    <pages:PopupPage.Animation
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+
+
+    <ScrollView Style="{StaticResource PopUpStyle}">
+        <StackLayout Padding="10">
+
+            <Label  x:Name="pageTitle"
+                       Style="{StaticResource PageTitle }"/>
+
+            <Label  x:Name="appPolicy"
+                       Style="{StaticResource labelStyle }"/>
+
+            <Label  x:Name="appTerms"
+                       Style="{StaticResource labelStyle }"/>
+
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0"
+                        x:Name="agreeButton"
+                        Style="{StaticResource popupButtonStyle}"
+                        Clicked="AgreeButton_Clicked"/>
+                
+                <Button Grid.Column="1"
+                        x:Name="donotAgreeButton"
+                        Style="{StaticResource popupButtonStyle}"
+                        Clicked="DonotAgreeButton_Clicked"/>
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+</Page:PopupPage>

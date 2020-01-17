@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="aboutApp" xml:space="preserve">
+    <value>حول التطبيق</value>
+  </data>
+  <data name="agreeButton" xml:space="preserve">
+    <value>أوافق</value>
+  </data>
+  <data name="agreement" xml:space="preserve">
+    <value>أوافق على سياسة و شروط التطبيق </value>
+  </data>
+  <data name="agreementPopup" xml:space="preserve">
+    <value>سياسة و شروط استخدام التطبيق</value>
+  </data>
+  <data name="appPolicy" xml:space="preserve">
+    <value>سياسة التطبيق</value>
+  </data>
+  <data name="appTerms" xml:space="preserve">
+    <value>شروط التطبيق</value>
+  </data>
+  <data name="bankCard" xml:space="preserve">
+    <value>ثالثاً: بيانات الحساب البنكي</value>
+  </data>
+  <data name="bankName" xml:space="preserve">
+    <value>اسم البنك</value>
+  </data>
+  <data name="changePassword" xml:space="preserve">
+    <value>تغيير كلمة المرور</value>
+  </data>
+  <data name="changePasswordMessage" xml:space="preserve">
+    <value>من فضلك أدخل كلمة المرور الجديدة و تأكيدها</value>
+  </data>
+  <data name="changePasswordPage" xml:space="preserve">
+    <value>تغيير كلمة المرور</value>
+  </data>
+  <data name="cityPicker" xml:space="preserve">
+    <value>اختر المدينة</value>
+  </data>
+  <data name="confirmPassword" xml:space="preserve">
+    <value>تأكيد كلمة المرور</value>
+  </data>
+  <data name="contactApp" xml:space="preserve">
+    <value>اتَّصل بنا</value>
+  </data>
+  <data name="customer" xml:space="preserve">
+    <value>العملاء</value>
+  </data>
+  <data name="customerSignupPage" xml:space="preserve">
+    <value>إنشاء حساب عميل</value>
+  </data>
+  <data name="donotAgreeButton" xml:space="preserve">
+    <value>لا أوافق</value>
+  </data>
+  <data name="email" xml:space="preserve">
+    <value>البريد الالكتروني</value>
+  </data>
+  <data name="expiryDate" xml:space="preserve">
+    <value>تاريخ الانتهاء</value>
+  </data>
+  <data name="forgetPassword" xml:space="preserve">
+    <value>نسيت كلمة المرور؟</value>
+  </data>
+  <data name="forgetPasswordMessage" xml:space="preserve">
+    <value>من فضلك أدخل رقم الجوال لتغيير كلمة المرور</value>
+  </data>
+  <data name="forgetPasswordPage" xml:space="preserve">
+    <value>نسيت كلمة المرور</value>
+  </data>
+  <data name="guest" xml:space="preserve">
+    <value>زائر</value>
+  </data>
+  <data name="handicraft" xml:space="preserve">
+    <value>الحِرفيين</value>
+  </data>
+  <data name="handicraftSignupPage" xml:space="preserve">
+    <value>إنشاء حساب حِرفي</value>
+  </data>
+  <data name="iban" xml:space="preserve">
+    <value>رقم الآيبان</value>
+  </data>
+  <data name="instagram" xml:space="preserve">
+    <value>رابط حساب الانستقرام </value>
+  </data>
+  <data name="login" xml:space="preserve">
+    <value>دخول</value>
+  </data>
+  <data name="loginButton" xml:space="preserve">
+    <value>تسجيل الدخول</value>
+  </data>
+  <data name="loginMessage" xml:space="preserve">
+    <value>من فضلك أدخل رقم الجوال و كلمة المرور للمتابعة</value>
+  </data>
+  <data name="loginPage" xml:space="preserve">
+    <value>تسجيل الدخول</value>
+  </data>
+  <data name="mandatory" xml:space="preserve">
+    <value>إجباري</value>
+  </data>
+  <data name="notMandatory" xml:space="preserve">
+    <value>غير إجباري</value>
+  </data>
+  <data name="passwordEntry" xml:space="preserve">
+    <value>كلمة المرور</value>
+  </data>
+  <data name="phoneEntry" xml:space="preserve">
+    <value>رقم الجوال</value>
+  </data>
+  <data name="reSendRestPassword" xml:space="preserve">
+    <value>إعادة إرسال رمز التحقق</value>
+  </data>
+  <data name="sendRestPassword" xml:space="preserve">
+    <value>إرسال رمز التحقق</value>
+  </data>
+  <data name="signupButton" xml:space="preserve">
+    <value>إنشاء حساب</value>
+  </data>
+  <data name="userInfo" xml:space="preserve">
+    <value>أولاً: المعلومات الشخصية</value>
+  </data>
+  <data name="userName" xml:space="preserve">
+    <value>الاسم</value>
+  </data>
+  <data name="visaCard" xml:space="preserve">
+    <value>ثانياً: بيانات بطاقة الفيزا</value>
+  </data>
+  <data name="visaCardNumber" xml:space="preserve">
+    <value>رقم البطاقة</value>
+  </data>
+  <data name="visaUserName" xml:space="preserve">
+    <value>اسم صاحب البطاقة</value>
+  </data>
+  <data name="welcome" xml:space="preserve">
+    <value>.. مرحباً بك ..</value>
+  </data>
+</root>
