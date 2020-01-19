@@ -14,6 +14,7 @@ namespace HerafApp
         public App()
         {
             InitializeComponent();
+            InitializeComponent();
 
             MainPage = new NavigationPage(new MainPage());
             ((NavigationPage)Application.Current.MainPage).BarBackgroundColor = Color.FromHex("#C7B299");

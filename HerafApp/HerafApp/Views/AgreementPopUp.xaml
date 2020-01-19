@@ -23,13 +23,13 @@
         <StackLayout Padding="10">
 
             <Label  x:Name="pageTitle"
-                       Style="{StaticResource PageTitle }"/>
+                       Style="{StaticResource PageTitle}"/>
 
             <Label  x:Name="appPolicy"
-                       Style="{StaticResource labelStyle }"/>
+                       Style="{StaticResource labelStyle}"/>
 
             <Label  x:Name="appTerms"
-                       Style="{StaticResource labelStyle }"/>
+                       Style="{StaticResource labelStyle}"/>
 
             <Grid >
                 <Grid.ColumnDefinitions>

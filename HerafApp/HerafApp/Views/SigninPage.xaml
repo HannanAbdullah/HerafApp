@@ -29,15 +29,15 @@
 
                 <Label Grid.Row="0"
                    x:Name="pageTitle"
-                   Style="{StaticResource PageTitle }"/>
+                   Style="{StaticResource PageTitle}"/>
 
                 <Label  Grid.Row="1"
                     x:Name="welcome"
-                    Style="{StaticResource welcomeLabel }"/>
+                    Style="{StaticResource welcomeLabel}"/>
 
                 <Label  Grid.Row="2"
                     x:Name="message"
-                    Style="{StaticResource messageLabel }"/>
+                    Style="{StaticResource messageLabel}"/>
                 
             <Grid Grid.Row="3" 
                   FlowDirection="LeftToRight">

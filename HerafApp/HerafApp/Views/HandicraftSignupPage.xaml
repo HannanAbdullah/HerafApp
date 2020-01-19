@@ -19,7 +19,7 @@
                      VerticalOptions="Center" >
 
                 <Label  x:Name="pageTitle"
-                   Style="{StaticResource PageTitle }"/>
+                   Style="{StaticResource PageTitle}"/>
 
 
                 <Grid>
@@ -30,11 +30,11 @@
 
                     <Label Grid.Column="0"
                            x:Name="handicraftInfo"
-                           Style="{StaticResource labelStyle }"/>
+                           Style="{StaticResource labelStyle}"/>
                     
                     <Label Grid.Column="1"
                            x:Name="mandatoryUserInfo"
-                           Style="{StaticResource mandatoryStyle }"/>
+                           Style="{StaticResource mandatoryStyle}"/>
                 </Grid>
             
                 <Entry x:Name="userName"
@@ -86,11 +86,11 @@
 
                     <Label Grid.Column="0"
                            x:Name="visaCard"
-                           Style="{StaticResource labelStyle }"/>
+                           Style="{StaticResource labelStyle}"/>
                     
                     <Label Grid.Column="1"
                            x:Name="mandatoryVisaCard"
-                           Style="{StaticResource mandatoryStyle }"/>
+                           Style="{StaticResource mandatoryStyle}"/>
                 </Grid>
 
                 <Entry x:Name="visaUserName"
@@ -127,11 +127,11 @@
 
                     <Label Grid.Column="0"
                            x:Name="bankCard"
-                           Style="{StaticResource labelStyle }"/>
+                           Style="{StaticResource labelStyle}"/>
                     
                     <Label Grid.Column="1"
                            x:Name="mandatoryBankCard"
-                           Style="{StaticResource mandatoryStyle }"/>
+                           Style="{StaticResource mandatoryStyle}"/>
                 </Grid>
 
                 <Entry x:Name="bankUserName"

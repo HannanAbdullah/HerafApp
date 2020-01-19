@@ -101,7 +101,7 @@
             <Style x:Key="infoEntryStyle" TargetType="Entry">
                 <Setter Property="PlaceholderColor" Value="{StaticResource NavigationBarColor}"/>
                 <Setter Property="TextColor" Value="{StaticResource NavigationBarColor}"/>
-                <Setter Property="FontFamily" Value="{StaticResource c}"/>
+                <Setter Property="FontFamily" Value="{StaticResource ReqularFontFamily}"/>
                 <Setter Property="FontSize" Value="{StaticResource EntryFontSize}"/>
                 <Setter Property="Margin" Value="0,-5,0,0"/>
             </Style>
@@ -173,7 +173,7 @@
                 <Setter Property="BorderColor" Value="{StaticResource BodyTextColor}"/>
                 <Setter Property="HeightRequest" Value="25"/>
             </Style>
-            
+
             <Style x:Key="welcomeLabel" TargetType="Label">
                 <Setter Property="TextColor" Value="{StaticResource HeaderTextColor}"/>
                 <Setter Property="FontFamily" Value="{StaticResource BoldFontFamily}"/>
@@ -182,7 +182,7 @@
                 <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
                 <Setter Property="Margin" Value="0,10,0,0"/>
             </Style>
-            
+
             <Style x:Key="messageLabel" TargetType="Label">
                 <Setter Property="TextColor" Value="{StaticResource BodyTextColor}"/>
                 <Setter Property="FontFamily" Value="{StaticResource ReqularFontFamily}"/>

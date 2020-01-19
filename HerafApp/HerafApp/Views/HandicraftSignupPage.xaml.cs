@@ -15,13 +15,13 @@ namespace HerafApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HandicraftSignupPage : ContentPage
     {
-        public static CheckBox AgreeCheckbox = new CheckBox() ;
+        public static CheckBox AgreeCheckbox;
 
         public HandicraftSignupPage()
         {
             InitializeComponent();
+            AgreeCheckbox = new CheckBox();
             AgreeCheckbox = agreeCheckbox;
-
 
         }
 
