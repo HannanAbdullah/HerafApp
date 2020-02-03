@@ -141,6 +141,9 @@
   <data name="bankName" xml:space="preserve">
     <value>Bank Name</value>
   </data>
+  <data name="cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
   <data name="changePassword" xml:space="preserve">
     <value>Reset Password</value>
   </data>
@@ -211,10 +214,16 @@
     <value>Login </value>
   </data>
   <data name="mandatory" xml:space="preserve">
-    <value>Mandatory</value>
+    <value>(Mandatory)</value>
+  </data>
+  <data name="monthPicker" xml:space="preserve">
+    <value>Expiry Month</value>
   </data>
   <data name="notMandatory" xml:space="preserve">
-    <value>Not Mandatory</value>
+    <value>(Not Mandatory)</value>
+  </data>
+  <data name="ok" xml:space="preserve">
+    <value>OK</value>
   </data>
   <data name="passwordEntry" xml:space="preserve">
     <value>Password</value>
@@ -248,5 +257,8 @@
   </data>
   <data name="welcome" xml:space="preserve">
     <value>.. Welcome ..</value>
+  </data>
+  <data name="yearPicker" xml:space="preserve">
+    <value>Expiry year</value>
   </data>
 </root>

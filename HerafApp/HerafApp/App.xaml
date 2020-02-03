@@ -34,12 +34,13 @@
             
              <!-- Font Size -->
             <x:Double x:Key="TitleFontSize">18</x:Double>
-            <x:Double x:Key="SubTitleFontSize">15</x:Double>
-            <x:Double x:Key="BodyFontSize">12</x:Double>
-            <x:Double x:Key="EntryFontSize">10</x:Double>
-            <x:Double x:Key="ButtonFontSize">10</x:Double>
+            <x:Double x:Key="SubTitleFontSize">16</x:Double>
+            <x:Double x:Key="BodyFontSize">13</x:Double>
+            <x:Double x:Key="EntryFontSize">11</x:Double>
+            <x:Double x:Key="ButtonFontSize">11</x:Double>
 
             <!-- Styles -->
+            <!-- 1) Page and Layout Style-->
             <Style  x:Key="MainContentPageStyle" TargetType="ContentPage" ApplyToDerivedTypes="True">
                 <Setter Property="BackgroundImageSource" Value="MainPageImage.png" />
             </Style>
@@ -48,12 +49,64 @@
                 <Setter Property="BackgroundImageSource" Value="Background.png" />
             </Style>
 
+            <Style x:Key="MainContentPageLayotStyle" TargetType="Grid" >
+                <Setter Property="Margin" Value="40,60,40,10"/>
+                <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+            </Style>
+
+            <Style x:Key="ContentPageLayotStyle" TargetType="StackLayout" >
+                <Setter Property="Margin" Value="40,10"/>
+                <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+            </Style>
+
+            <!-- 2) Images and ImageButtons Style-->
             <Style x:Key="AppLogoImage" TargetType="Image">
-                <Setter Property="HeightRequest" Value="100"/>
-                <Setter Property="WidthRequest" Value="100"/>
-                <Setter Property="Margin" Value="0,0,0,30"/>
+                <Setter Property="VerticalOptions" Value="StartAndExpand"/>
+                <Setter Property="Aspect" Value="AspectFit"/>
+             </Style>
+
+            <Style x:Key="MainIconImageButton" TargetType="ImageButton">
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="VerticalOptions" Value="Fill"/>
+                <Setter Property="Aspect" Value="AspectFit"/>
+            </Style>
+
+            <Style x:Key="SocialIconImageButton" TargetType="ImageButton">
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="VerticalOptions" Value="End"/>
+                <Setter Property="Aspect" Value="AspectFit"/>
+                <Setter Property="HeightRequest" Value="20"/>
+                <Setter Property="WidthRequest" Value="20"/>
+            </Style>
+
+            <!-- 3) Buttons Style-->
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource ButtonBackgroundColor}"/>
+                <Setter Property="TextColor" Value="{StaticResource ButtonTextColor}"/>
+                <Setter Property="FontFamily" Value="{StaticResource BoldFontFamily}"/>
+                <Setter Property="FontSize" Value="{StaticResource ButtonFontSize}"/>
+                <Setter Property="Margin" Value="20,0"/>
+                <Setter Property="CornerRadius" Value="7"/>
+                <Setter Property="BorderWidth" Value="1"/>
+                <Setter Property="Padding" Value="1"/>
+                <Setter Property="BorderColor" Value="{StaticResource BodyTextColor}"/>
+                <Setter Property="HeightRequest" Value="25"/>
+            </Style>
+
+            <Style x:Key="popupButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource ButtonBackgroundColor}"/>
+                <Setter Property="TextColor" Value="{StaticResource ButtonTextColor}"/>
+                <Setter Property="FontFamily" Value="{StaticResource BoldFontFamily}"/>
+                <Setter Property="FontSize" Value="{StaticResource ButtonFontSize}"/>
+                <Setter Property="Margin" Value="10,20"/>
+                <Setter Property="CornerRadius" Value="7"/>
+                <Setter Property="BorderWidth" Value="1"/>
+                <Setter Property="Padding" Value="1"/>
+                <Setter Property="BorderColor" Value="{StaticResource BodyTextColor}"/>
+                <Setter Property="HeightRequest" Value="25"/>
             </Style>
             
+            <!-- 4) Labels Style-->
             <Style x:Key="MainIconLabel" TargetType="Label">
                 <Setter Property="TextColor" Value="{StaticResource HeaderTextColor}"/>
                 <Setter Property="FontFamily" Value="{StaticResource BoldFontFamily}"/>
@@ -68,27 +121,7 @@
                 <Setter Property="FontFamily" Value="{StaticResource BoldFontFamily}"/>
                 <Setter Property="FontSize" Value="{StaticResource TitleFontSize}"/>
                 <Setter Property="HorizontalTextAlignment" Value="Center"/>
-                <Setter Property="Margin" Value="0,10"/>
-            </Style>
-
-            <Style x:Key="MainIconImageButton" TargetType="ImageButton">
-                <Setter Property="HeightRequest" Value="50"/>
-                <Setter Property="WidthRequest" Value="50"/>
-                <Setter Property="BackgroundColor" Value="Transparent"/>
-            </Style>
-            
-            <Style x:Key="SocialIconImageButton" TargetType="ImageButton">
-                <Setter Property="HeightRequest" Value="15"/>
-                <Setter Property="WidthRequest" Value="15"/>
-                <Setter Property="BackgroundColor" Value="Transparent"/>
-            </Style>
-            <Style x:Key="entryStyle" TargetType="Entry">
-                <Setter Property="PlaceholderColor" Value="{StaticResource NavigationBarColor}"/>
-                <Setter Property="TextColor" Value="{StaticResource NavigationBarColor}"/>
-                <Setter Property="FontFamily" Value="{StaticResource ReqularFontFamily}"/>
-                <Setter Property="FontSize" Value="{StaticResource EntryFontSize}"/>
-                <Setter Property="HorizontalTextAlignment" Value="Center"/>
-                <Setter Property="Margin" Value="0,-5,0,0"/>
+                <Setter Property="Margin" Value="0,10,0,20"/>
             </Style>
 
             <Style x:Key="countryKeyStyle" TargetType="Label">
@@ -97,15 +130,7 @@
                 <Setter Property="FontSize" Value="{StaticResource EntryFontSize}"/>
                 <Setter Property="Margin" Value="0,10,0,0"/>
             </Style>
-            
-            <Style x:Key="infoEntryStyle" TargetType="Entry">
-                <Setter Property="PlaceholderColor" Value="{StaticResource NavigationBarColor}"/>
-                <Setter Property="TextColor" Value="{StaticResource NavigationBarColor}"/>
-                <Setter Property="FontFamily" Value="{StaticResource ReqularFontFamily}"/>
-                <Setter Property="FontSize" Value="{StaticResource EntryFontSize}"/>
-                <Setter Property="Margin" Value="0,-5,0,0"/>
-            </Style>
-            
+
             <Style x:Key="labelStyle" TargetType="Label">
                 <Setter Property="TextColor" Value="{StaticResource BodyTextColor}"/>
                 <Setter Property="FontFamily" Value="{StaticResource BoldFontFamily}"/>
@@ -114,22 +139,12 @@
             </Style>
 
             <Style x:Key="mandatoryStyle" TargetType="Label">
-                <Setter Property="TextColor" Value="DarkRed"/>
+                <Setter Property="TextColor" Value="IndianRed"/>
                 <Setter Property="FontFamily" Value="{StaticResource ReqularFontFamily}"/>
-                <Setter Property="FontSize" Value="{StaticResource EntryFontSize}"/>
+                <Setter Property="FontSize" Value="10"/>
                 <Setter Property="Margin" Value="0,20,0,0"/>
             </Style>
-            
-            <Style x:Key="pickerStyle" TargetType="Picker">
-                <Setter Property="TextColor" Value="{StaticResource NavigationBarColor}"/>
-                <Setter Property="TitleColor" Value="{StaticResource NavigationBarColor}"/>
-                <Setter Property="FontFamily" Value="{StaticResource ReqularFontFamily}"/>
-                <Setter Property="FontSize" Value="{StaticResource EntryFontSize}"/>
-                <Setter Property="Margin" Value="0,-5,0,0"/>
-                <Setter Property="VerticalOptions" Value="Center"/>
-                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
-            </Style>
-            
+
             <Style x:Key="forgetPassword" TargetType="Label">
                 <Setter Property="TextColor" Value="{StaticResource NavigationBarColor}"/>
                 <Setter Property="FontFamily" Value="{StaticResource ReqularFontFamily}"/>
@@ -143,44 +158,11 @@
                 <Setter Property="FontSize" Value="{StaticResource EntryFontSize}"/>
             </Style>
             
-            <Style x:Key="checkboxStyle" TargetType="CheckBox">
-                <Setter Property="Color" Value="{StaticResource HeaderTextColor}"/>
-                <Setter Property="IsChecked" Value="False"/>
-            </Style>
-            
-            <Style x:Key="buttonStyle" TargetType="Button">
-                <Setter Property="BackgroundColor" Value="{StaticResource ButtonBackgroundColor}"/>
-                <Setter Property="TextColor" Value="{StaticResource ButtonTextColor}"/>
-                <Setter Property="FontFamily" Value="{StaticResource BoldFontFamily}"/>
-                <Setter Property="FontSize" Value="{StaticResource ButtonFontSize}"/>
-                <Setter Property="Margin" Value="20,0,20,0"/>
-                <Setter Property="CornerRadius" Value="7"/>
-                <Setter Property="BorderWidth" Value="1"/>
-                <Setter Property="Padding" Value="1"/>
-                <Setter Property="BorderColor" Value="{StaticResource BodyTextColor}"/>
-                <Setter Property="HeightRequest" Value="25"/>
-             </Style>
-
-            <Style x:Key="popupButtonStyle" TargetType="Button">
-                <Setter Property="BackgroundColor" Value="{StaticResource ButtonBackgroundColor}"/>
-                <Setter Property="TextColor" Value="{StaticResource ButtonTextColor}"/>
-                <Setter Property="FontFamily" Value="{StaticResource BoldFontFamily}"/>
-                <Setter Property="FontSize" Value="{StaticResource ButtonFontSize}"/>
-                <Setter Property="Margin" Value="0,10,0,10"/>
-                <Setter Property="CornerRadius" Value="7"/>
-                <Setter Property="BorderWidth" Value="1"/>
-                <Setter Property="Padding" Value="1"/>
-                <Setter Property="BorderColor" Value="{StaticResource BodyTextColor}"/>
-                <Setter Property="HeightRequest" Value="25"/>
-            </Style>
-
             <Style x:Key="welcomeLabel" TargetType="Label">
                 <Setter Property="TextColor" Value="{StaticResource HeaderTextColor}"/>
                 <Setter Property="FontFamily" Value="{StaticResource BoldFontFamily}"/>
                 <Setter Property="FontSize" Value="{StaticResource BodyFontSize}"/>
                 <Setter Property="HorizontalTextAlignment" Value="Center"/>
-                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
-                <Setter Property="Margin" Value="0,10,0,0"/>
             </Style>
 
             <Style x:Key="messageLabel" TargetType="Label">
@@ -188,18 +170,54 @@
                 <Setter Property="FontFamily" Value="{StaticResource ReqularFontFamily}"/>
                 <Setter Property="FontSize" Value="{StaticResource BodyFontSize}"/>
                 <Setter Property="HorizontalTextAlignment" Value="Center"/>
-                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
                 <Setter Property="Margin" Value="0,0,0,20"/>
             </Style>
 
+            <!-- 5) Entries Style-->
+            <Style x:Key="entryStyle" TargetType="Entry">
+                <Setter Property="PlaceholderColor" Value="{StaticResource NavigationBarColor}"/>
+                <Setter Property="TextColor" Value="{StaticResource NavigationBarColor}"/>
+                <Setter Property="FontFamily" Value="{StaticResource ReqularFontFamily}"/>
+                <Setter Property="FontSize" Value="{StaticResource EntryFontSize}"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="0,-5,0,0"/>
+            </Style>
+            
+            <Style x:Key="infoEntryStyle" TargetType="Entry">
+                <Setter Property="PlaceholderColor" Value="{StaticResource NavigationBarColor}"/>
+                <Setter Property="TextColor" Value="{StaticResource NavigationBarColor}"/>
+                <Setter Property="FontFamily" Value="{StaticResource ReqularFontFamily}"/>
+                <Setter Property="FontSize" Value="{StaticResource EntryFontSize}"/>
+                <Setter Property="Margin" Value="0,-5,0,0"/>
+            </Style>
+
+            <!-- 6) Pickers Style-->
+            <Style x:Key="PickerStyle" TargetType="Picker">
+                <Setter Property="TextColor" Value="{StaticResource NavigationBarColor}"/>
+                <Setter Property="TitleColor" Value="{StaticResource NavigationBarColor}"/>
+                <Setter Property="FontFamily" Value="{StaticResource ReqularFontFamily}"/>
+                <Setter Property="FontSize" Value="{StaticResource EntryFontSize}"/>
+                <Setter Property="Margin" Value="0,-5,0,0"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="BackgroundColor" Value="WhiteSmoke"/>
+            </Style>
+            
+            <!-- 7) Checkboxes Style-->
+            <Style x:Key="checkboxStyle" TargetType="CheckBox">
+                <Setter Property="Color" Value="{StaticResource HeaderTextColor}"/>
+                <Setter Property="IsChecked" Value="False"/>
+            </Style>
+
+            <!-- 8) ScrollView Style-->
             <Style x:Key="PopUpStyle" TargetType="ScrollView">
                 <Setter Property="Margin" Value="30"/>
                 <Setter Property="BackgroundColor" Value="WhiteSmoke"/>
                 <Setter Property="VerticalOptions" Value="Center"/>
                 <Setter Property="HorizontalOptions" Value="Center"/>
-                
-            </Style>
+             </Style>
+            
+            
         </ResourceDictionary>
-        
     </Application.Resources>
 </Application>

@@ -11,43 +11,55 @@
 
 
     <ContentPage.Content>
-        <Grid  Margin="40,60,40,10"
-               VerticalOptions="Center" >
+        <Grid  Style="{StaticResource MainContentPageLayotStyle}">
             
             <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
             <Image Grid.Row="0"
               Source="AppLogo.png"
                    Style="{StaticResource AppLogoImage}"/>
 
-
-            <Grid Grid.Row="1">
+            <Grid Grid.Row="1" 
+                  Margin="0,40,0,0">
                 
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-
-                 <StackLayout Grid.Column="0">
-                    <ImageButton Source="Handicraft.png" 
+                <ImageButton Grid.Column="0"
+                                 Source="Handicraft.png" 
                                  Style="{StaticResource MainIconImageButton}" 
                                  Clicked="HandicraftsLoginButton_Clicked"/>
-                    <Label x:Name="handicraftLogin1" 
-                           Style="{StaticResource MainIconLabel}" />
-                    <Label x:Name="handicraftLogin2"  
-                           Style="{StaticResource MainIconLabel}" />
-                </StackLayout>
-            
-                 <StackLayout Grid.Column="1">
-                    <ImageButton Source="Customers.png"                                
+
+                <ImageButton     Grid.Column="1"
+                                 Source="Customers.png"                                
                                  Style="{StaticResource MainIconImageButton}"
                                  Clicked="CustomersLoginButton_Clicked"/>
+                
+            </Grid>
+
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Column="0">
+                    <Label  x:Name="handicraftLogin1"  
+                            Style="{StaticResource MainIconLabel}" />
+                    <Label  x:Name="handicraftLogin2"  
+                           Style="{StaticResource MainIconLabel}"/>
+                </StackLayout>
+
+                <StackLayout Grid.Column="1">
                     <Label x:Name="customerLogin1"  
                            Style="{StaticResource MainIconLabel}" />
                     <Label x:Name="customerLogin2" 
@@ -55,20 +67,20 @@
                 </StackLayout>
                 
             </Grid>
+            
+            <ImageButton Grid.Row="3"
+                         Source="Guest.png" 
+                         Style="{StaticResource MainIconImageButton}"
+                         Clicked="GuestLoginButton_Clicked"
+                         Margin="0,0,0,40"/>
 
-            <Grid Grid.Row="2" >
-                <StackLayout HorizontalOptions="Center" 
-                             VerticalOptions="Center" >
-                    <ImageButton Source="Guest.png" 
-                                 Style="{StaticResource MainIconImageButton}"
-                                 Clicked="GuestLoginButton_Clicked"/>
-                    <Label x:Name="guest"  
-                           Style="{StaticResource MainIconLabel}" />
-                </StackLayout>
-            </Grid>
+            <Label  Grid.Row="4"
+                    x:Name="guest"  
+                    Style="{StaticResource MainIconLabel}" 
+                    Margin="0,-70,0,0"/>
 
-            <Grid Grid.Row="3" Margin="40, 50,40,0" >
-                
+            <Grid Grid.Row="5" >
+
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
@@ -90,14 +102,13 @@
                              Source="Facebook.png"
                              Style="{StaticResource SocialIconImageButton}"
                              Clicked="FacebookButton_Clicked"/>
-                
+
                 <ImageButton Grid.Column="3" 
                              Source="Phone.png"
                              Style="{StaticResource SocialIconImageButton}"
                              Clicked="CallButton_Clicked"/>
+
             </Grid>
-
-
         </Grid>
     </ContentPage.Content>
 </ContentPage>

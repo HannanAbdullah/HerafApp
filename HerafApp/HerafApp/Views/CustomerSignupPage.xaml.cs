@@ -35,13 +35,17 @@ namespace HerafApp.Views
             {
                 this.FlowDirection = FlowDirection.RightToLeft;
                 agreement.Margin = new Thickness(0, 10, -10, 10);
+                cityPicker.FlowDirection = FlowDirection.RightToLeft;
+
             }
             else
             {
                 this.FlowDirection = FlowDirection.LeftToRight;
                 agreement.Margin = new Thickness(-10, 10, 0, 10);
+                cityPicker.FlowDirection = FlowDirection.LeftToRight ;
             }
-
+            App.cancel = AppResources.cancel;
+            App.ok = AppResources.ok;
             pageTitle.Text = AppResources.customerSignupPage;
             customerInfo.Text = AppResources.userInfo;
             userName.Placeholder = AppResources.userName;
@@ -50,11 +54,16 @@ namespace HerafApp.Views
             password.Placeholder = AppResources.passwordEntry;
             confirmPassword.Placeholder = AppResources.confirmPassword;
             cityPicker.Title = AppResources.cityPicker;
+            monthPicker.Title = AppResources.monthPicker;
+            yearPicker.Title = AppResources.yearPicker;
             visaCard.Text = AppResources.visaCard;
             visaUserName.Placeholder = AppResources.visaUserName;
             visaCardNumber.Placeholder = AppResources.visaCardNumber;
             signupButton.Text = AppResources.signupButton;
             agreement.Text = AppResources.agreement;
+            mandatoryUserInfo.Text = AppResources.mandatory;
+            mandatoryVisaCard.Text = AppResources.notMandatory;
+
 
             CrossMultilingual.Current.CurrentCultureInfo = new System.Globalization.CultureInfo(App.language);
             AppResources.Culture = CrossMultilingual.Current.CurrentCultureInfo;

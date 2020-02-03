@@ -141,6 +141,9 @@
   <data name="bankName" xml:space="preserve">
     <value>اسم البنك</value>
   </data>
+  <data name="cancel" xml:space="preserve">
+    <value>إلغاء</value>
+  </data>
   <data name="changePassword" xml:space="preserve">
     <value>تغيير كلمة المرور</value>
   </data>
@@ -211,10 +214,16 @@
     <value>تسجيل الدخول</value>
   </data>
   <data name="mandatory" xml:space="preserve">
-    <value>إجباري</value>
+    <value>(إجباري)</value>
+  </data>
+  <data name="monthPicker" xml:space="preserve">
+    <value>شهر انتهاء البطاقة</value>
   </data>
   <data name="notMandatory" xml:space="preserve">
-    <value>غير إجباري</value>
+    <value>(غير إجباري)</value>
+  </data>
+  <data name="ok" xml:space="preserve">
+    <value>اختيار</value>
   </data>
   <data name="passwordEntry" xml:space="preserve">
     <value>كلمة المرور</value>
@@ -229,7 +238,7 @@
     <value>إرسال رمز التحقق</value>
   </data>
   <data name="signupButton" xml:space="preserve">
-    <value>إنشاء حساب</value>
+    <value>إنشاء حساب جديد </value>
   </data>
   <data name="userInfo" xml:space="preserve">
     <value>أولاً: المعلومات الشخصية</value>
@@ -248,5 +257,8 @@
   </data>
   <data name="welcome" xml:space="preserve">
     <value>.. مرحباً بك ..</value>
+  </data>
+  <data name="yearPicker" xml:space="preserve">
+    <value>سنة انتهاء البطاقة</value>
   </data>
 </root>

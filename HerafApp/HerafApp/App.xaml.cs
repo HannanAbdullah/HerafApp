@@ -1,4 +1,5 @@
-﻿using HerafApp.Views;
+﻿using HerafApp.Resources;
+using HerafApp.Views;
 using System;
 using System.Globalization;
 using Xamarin.Forms;
@@ -10,11 +11,17 @@ namespace HerafApp
     {
         public static string language = CultureInfo.CurrentCulture.Name.Substring(0, 2);
         public static string LogedinUser="Guest";
+        public static string cancel;
+        public static string ok;
 
         public App()
         {
             InitializeComponent();
-            InitializeComponent();
+
+            //Register Syncfusion license
+            //Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MjAxODA1QDMxMzcyZTM0MmUzMGlhVFBXc1p4dndlY1AvSDkzWEZsL3dxb2Mrc1R5REkvR0dWLytUdjZWdUU9");
+            cancel = AppResources.cancel;
+            ok = AppResources.ok;
 
             MainPage = new NavigationPage(new MainPage());
             ((NavigationPage)Application.Current.MainPage).BarBackgroundColor = Color.FromHex("#C7B299");

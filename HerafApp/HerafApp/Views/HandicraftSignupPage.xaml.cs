@@ -1,4 +1,5 @@
 ﻿using HerafApp.Resources;
+using HerafApp.ViewModels.Handicraft;
 using Plugin.Multilingual;
 using Rg.Plugins.Popup.Services;
 using System;
@@ -16,13 +17,35 @@ namespace HerafApp.Views
     public partial class HandicraftSignupPage : ContentPage
     {
         public static CheckBox AgreeCheckbox;
+        HandicraftSignupPageVM viewModel;
 
         public HandicraftSignupPage()
         {
             InitializeComponent();
             AgreeCheckbox = new CheckBox();
             AgreeCheckbox = agreeCheckbox;
+            viewModel = Resources["vm"] as HandicraftSignupPageVM;
 
+            /*
+              MessagingCenter.Subscribe<Object>(this, "Ok_Clicked", (sender)=> {
+
+              picker.Unfocus();
+
+              DisplayAlert("Title", "Ok has been clicked", "cancel");
+
+              //do something you want
+
+             });
+
+             MessagingCenter.Subscribe<Object>(this, "Cancel_Clicked", (sender) => {
+
+               picker.Unfocus();
+
+               DisplayAlert("Title", "Cancel has been clicked", "cancel");
+
+               //do something you want
+             });
+             */
         }
 
         protected override void OnAppearing()
@@ -35,13 +58,17 @@ namespace HerafApp.Views
             { 
                 this.FlowDirection = FlowDirection.RightToLeft;
                 agreement.Margin = new Thickness(0, 10, -10, 10);
+                cityPicker.FlowDirection = FlowDirection.RightToLeft;
             }
             else
             { 
                 this.FlowDirection = FlowDirection.LeftToRight;
                 agreement.Margin = new Thickness(-10, 10, 0, 10);
+                cityPicker.FlowDirection = FlowDirection.LeftToRight ;
             }
 
+            App.cancel = AppResources.cancel;
+            App.ok = AppResources.ok;
             pageTitle.Text = AppResources.handicraftSignupPage;
             handicraftInfo.Text = AppResources.userInfo;
             mandatoryUserInfo.Text = AppResources.mandatory;
@@ -52,6 +79,8 @@ namespace HerafApp.Views
             confirmPassword.Placeholder = AppResources.confirmPassword;
             instagram.Placeholder = AppResources.instagram;
             cityPicker.Title = AppResources.cityPicker;
+            monthPicker.Title = AppResources.monthPicker;
+            yearPicker.Title = AppResources.yearPicker;
             visaCard.Text = AppResources.visaCard;
             mandatoryVisaCard.Text = AppResources.mandatory;
             visaUserName.Placeholder = AppResources.visaUserName;
@@ -61,7 +90,7 @@ namespace HerafApp.Views
             bankUserName.Placeholder = AppResources.visaUserName;
             iban.Placeholder = AppResources.iban;
             signupButton.Text = AppResources.signupButton;
-            bankName.Placeholder = AppResources.bankName;
+            bankName.Title = AppResources.bankName;
             agreement.Text = AppResources.agreement;
 
             CrossMultilingual.Current.CurrentCultureInfo = new System.Globalization.CultureInfo(App.language);
@@ -90,5 +119,6 @@ namespace HerafApp.Views
             PopupNavigation.Instance.PushAsync(new AgreementPopUp()); 
         }
 
+        
     }
 }

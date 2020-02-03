@@ -3,10 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:HerafApp.ViewModels.Handicraft"
              mc:Ignorable="d"
              Style="{StaticResource ContentPageStyle}"
              NavigationPage.HasNavigationBar="True"
              x:Class="HerafApp.Views.HandicraftSignupPage">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <vm:HandicraftSignupPageVM x:Key="vm"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     
     <ContentPage.ToolbarItems>
         <ToolbarItem Icon="Language.png"
@@ -15,12 +22,11 @@
     
     <ContentPage.Content>
         <ScrollView >
-        <StackLayout Margin="40,0,40,30"
-                     VerticalOptions="Center" >
+            <StackLayout  Style="{StaticResource ContentPageLayotStyle}"
+                          BindingContext="{Binding Source= {StaticResource vm}}" >
 
                 <Label  x:Name="pageTitle"
                    Style="{StaticResource PageTitle}"/>
-
 
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -38,11 +44,11 @@
                 </Grid>
             
                 <Entry x:Name="userName"
-                       Style="{StaticResource infoEntryStyle}"
+                       Style="{StaticResource entryStyle}"
                        Keyboard="Text" />
             
                 <Entry x:Name="email"
-                       Style="{StaticResource infoEntryStyle}"
+                       Style="{StaticResource entryStyle}"
                        Keyboard="Email" />
             
                 <Grid FlowDirection="LeftToRight">
@@ -59,23 +65,25 @@
                            x:Name="phoneEntry"
                            Keyboard="Telephone"
                            HorizontalTextAlignment="Center"
-                           Style="{StaticResource infoEntryStyle}"/>
+                           Style="{StaticResource entryStyle}"/>
                 </Grid>
 
                 <Entry x:Name="password"
                        IsPassword="True"
-                       Style="{StaticResource infoEntryStyle}"/>
-            
+                       Style="{StaticResource entryStyle}"/>
+
                 <Entry x:Name="confirmPassword"
                        IsPassword="True"
-                       Style="{StaticResource infoEntryStyle}"/>
+                       Style="{StaticResource entryStyle}"/>
 
-                <Picker  x:Name="cityPicker"
-                         Style="{StaticResource pickerStyle}" />
- 
+
+                <Picker   x:Name="cityPicker"
+                          ItemsSource="{Binding Cities}" 
+                          Style="{StaticResource PickerStyle}"/>
+                
                 <Entry x:Name="instagram"
                        Keyboard="Url"
-                       Style="{StaticResource infoEntryStyle}"/>
+                       Style="{StaticResource entryStyle}"/>
 
 
                 <Grid >
@@ -95,28 +103,40 @@
 
                 <Entry x:Name="visaUserName"
                    Keyboard="Text"
-                   Style="{StaticResource infoEntryStyle}"/>
+                   Style="{StaticResource entryStyle}"/>
 
-            <Entry x:Name="visaCardNumber"
+                <Entry x:Name="visaCardNumber"
                    Keyboard="Numeric"
-                   Style="{StaticResource infoEntryStyle}"/>
+                   Style="{StaticResource entryStyle}"/>
 
-            <Grid >
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
 
-                <Entry Grid.Column="0"
-                       Placeholder="CVV"
-                       Keyboard="Numeric"
-                       Style="{StaticResource infoEntryStyle}"/>
+                    <Entry Grid.Column="0"
+                           Placeholder="CVV"
+                           Keyboard="Numeric"
+                           Style="{StaticResource entryStyle}"/>
 
-                    <DatePicker  Grid.Column="1"
-                             x:Name="expiryDate"
-                             Style="{StaticResource pickerStyle}"
-                             Format="MM/yy" />
-            </Grid>
+                    <Picker   Grid.Column="1"
+                              x:Name="monthPicker"
+                              ItemsSource="{Binding Months}" 
+                              Style="{StaticResource PickerStyle}"/>
+                    
+                    <Label Grid.Column="2"
+                            Text="/"
+                            Style="{StaticResource countryKeyStyle}"/>
+                    
+                    <Picker   Grid.Column="3"
+                              x:Name="yearPicker"
+                              ItemsSource="{Binding Years}" 
+                              Style="{StaticResource PickerStyle}"/>
+
+                </Grid>
 
 
                 <Grid >
@@ -136,16 +156,29 @@
 
                 <Entry x:Name="bankUserName"
                    Keyboard="Text"
-                   Style="{StaticResource infoEntryStyle}"/>
-            
-                <Entry x:Name="bankName"
-                   Keyboard="Text"
-                   Style="{StaticResource infoEntryStyle}"/>
-            
-                <Entry x:Name="iban"
-                   Keyboard="Text"
-                   Style="{StaticResource infoEntryStyle}"/>
+                   Style="{StaticResource entryStyle}"/>
+                
+                
+                <Picker x:Name="bankName"
+                        ItemsSource="{Binding Banks}" 
+                        Style="{StaticResource PickerStyle}"/>
 
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Column="0"
+                           Text="SA"
+                           Style="{StaticResource countryKeyStyle}"/>
+
+                    <Entry Grid.Column="1"
+                           x:Name="iban"
+                           Keyboard="Numeric"
+                           Style="{StaticResource entryStyle}"/>        
+                </Grid>
+                
                 <Grid >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
@@ -164,12 +197,11 @@
                         </Label.GestureRecognizers>
                     </Label>
                 </Grid>
-            
+
                 <Button x:Name="signupButton"
                         Style="{StaticResource buttonStyle}"
                         Clicked="SignupButton_Clicked"
                         Margin="0,0,0,30"/>
-
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

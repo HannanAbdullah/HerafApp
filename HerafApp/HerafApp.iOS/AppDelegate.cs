@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using Syncfusion.SfPicker.XForms.iOS;
 using UIKit;
 
 namespace HerafApp.iOS
@@ -25,6 +26,7 @@ namespace HerafApp.iOS
             Rg.Plugins.Popup.Popup.Init();
             
             global::Xamarin.Forms.Forms.Init();
+            SfPickerRenderer.Init();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

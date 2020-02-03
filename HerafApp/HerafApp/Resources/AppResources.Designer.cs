@@ -133,6 +133,15 @@ namespace HerafApp.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to إلغاء.
+        /// </summary>
+        internal static string cancel {
+            get {
+                return ResourceManager.GetString("cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to تغيير كلمة المرور.
         /// </summary>
         internal static string changePassword {
@@ -340,7 +349,7 @@ namespace HerafApp.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to إجباري.
+        ///   Looks up a localized string similar to (إجباري).
         /// </summary>
         internal static string mandatory {
             get {
@@ -349,11 +358,29 @@ namespace HerafApp.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to غير إجباري.
+        ///   Looks up a localized string similar to شهر انتهاء البطاقة.
+        /// </summary>
+        internal static string monthPicker {
+            get {
+                return ResourceManager.GetString("monthPicker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to (غير إجباري).
         /// </summary>
         internal static string notMandatory {
             get {
                 return ResourceManager.GetString("notMandatory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to اختيار.
+        /// </summary>
+        internal static string ok {
+            get {
+                return ResourceManager.GetString("ok", resourceCulture);
             }
         }
         
@@ -394,7 +421,7 @@ namespace HerafApp.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to إنشاء حساب.
+        ///   Looks up a localized string similar to إنشاء حساب جديد .
         /// </summary>
         internal static string signupButton {
             get {
@@ -453,6 +480,15 @@ namespace HerafApp.Resources {
         internal static string welcome {
             get {
                 return ResourceManager.GetString("welcome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to سنة انتهاء البطاقة.
+        /// </summary>
+        internal static string yearPicker {
+            get {
+                return ResourceManager.GetString("yearPicker", resourceCulture);
             }
         }
     }
